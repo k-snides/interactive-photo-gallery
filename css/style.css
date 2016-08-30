@@ -2,6 +2,7 @@
 --- Mobile First ---
 =================================================== */
 
+/* ----- General Styles ----- */
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +11,29 @@
 
 body {
 	background-color: #fff;
+}
+
+/* ----- Wrappers ----- */
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+/* ----- Header ----- */
+header {
+	background-color: green;
+	padding: 2em 0;
+	position: fixed;
+	width: 100%;
+}
+
+/* ----- Search Box ----- */
+input[type="search"] {
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	font-size: 16pt;
 }
 
 
@@ -39,6 +63,12 @@ body {
 
 @media screen and (min-width: 768px) {
 	
+	/* ----- Search Box ----- */
+	input[type="search"] {
+		width: 460px;
+		
+	}
+
 }
 
 
