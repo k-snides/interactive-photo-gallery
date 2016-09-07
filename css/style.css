@@ -36,7 +36,39 @@ input[type="search"] {
 	font-size: 16pt;
 }
 
+/* ----- Photo Section ----- */
+section .wrapper {
+	padding-top: 6em;
+}
 
+#photo-gallery li {
+	list-style: none;
+}
+
+figcaption {
+	/*display: none;*/
+	width: 300px;
+	color: #ddd;
+}
+
+
+
+
+
+/* ----- Overlay ----- */
+#overlay {
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+/*#overlay img {
+	
+}*/
 
 
 
@@ -66,9 +98,23 @@ input[type="search"] {
 	/* ----- Search Box ----- */
 	input[type="search"] {
 		width: 460px;
-		
 	}
 
+	/* ----- Photo Section ----- */
+	
+
+
+	/* ----- Overlay Section ----- */
+	img {
+		max-width: 800px;
+	}
+
+	figcaption {
+		width: 600px;
+		font-size: 1.2em;
+		padding-top: 1em;
+		/*margin: 0 auto;*/
+	}
 }
 
 
