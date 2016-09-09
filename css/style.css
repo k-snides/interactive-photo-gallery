@@ -17,7 +17,6 @@ body {
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
-	max-width: 980px;
 }
 
 /* ---------- Header ---------- */
@@ -49,7 +48,8 @@ section .wrapper {
 
 #photo-gallery li {
 	list-style: none;
-	
+	margin-bottom: 20px;
+	padding: 0 7px;
 }
 
 #photo-gallery img {
@@ -126,19 +126,10 @@ section .wrapper {
 	}
 
 	/* ---------- Photo Section ---------- */
-	#photo-gallery {
-		justify-content: flex-start;
-	}
-
-	#photo-gallery li {
-		/*padding: 0 30px;*/
-	}
-
 	#photo-gallery img {
 		width: 200px;
 		height: 200px;
 	}
-
 
 	/* ---------- Overlay ---------- */
 	#overlay img {
@@ -181,15 +172,24 @@ section .wrapper {
 
 
 /* ===================================================
---- Medium devices (tablets landscape / desktop 1024px and up) ---
+--- Medium devices (tablets landscape / desktop 980px and up) ---
 =================================================== */
 
-@media screen and (min-width: 1024px) {
-
+@media screen and (min-width: 980px) {
 	/* ---------- Wrappers ---------- */
 	.wrapper {
 		max-width: 980px;
 	}
+	
+	/* ---------- Photo Section ---------- */
+	#photo-gallery {
+		justify-content: space-between;
+	}
+
+	#photo-gallery li {
+		margin-bottom: 60px;
+	}
+
 	
 }
 

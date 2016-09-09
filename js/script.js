@@ -1,20 +1,9 @@
-// var photos = [
-// 	{
-// 		name: 'Hay Bales',
-// 		caption: 'I love hay bales. Tohapok this snap on a drive through the countryside past some straw fields.'
-// 	},
-// 	{
-// 		name: 'Lake',
-// 		caption: 'The lake was so calm today. We had a great view of the snow on the mountains from here.'
-// 	}
-// ]
-
 // Variables
 var $overlay    = $('<div id="overlay"></div>');
 var $image      = $("<img>");
 var $figCaption = $('<figcaption></figcaption>');
 
-
+/* ----- Begin Overlay ----- */
 // Add an image to the overlay
 $overlay.append($image);
 
@@ -23,7 +12,6 @@ $overlay.append($figCaption);
 
 // Add overlay to the body element
 $('body').append($overlay);
-
 
 // Display large photo in overlay on click
 $('#photo-gallery a').on('click', function(event) {
@@ -47,12 +35,61 @@ $('#photo-gallery a').on('click', function(event) {
 	$figCaption.text(captionText);
 });
 
-
 // Close overlay when clicked
 $overlay.on('click', function() {
 	// Hides the overlay
 	$overlay.hide();
 });
+/* ----- End Overlay ----- */
+
+
+/* ----- Begin Search ----- */
+$('#search').on('keyup click input', function() {
+
+	var search = $(this).val().toLowerCase();
+	 
+	 $('#photo-gallery img').each(function(){
+	 	var text = $(this).attr('title').toLowerCase();
+	 
+	 	if(text.indexOf(search) !== -1) {
+	 		$(this).closest('li').show('slow');
+	 	}
+	 	else {
+	 		$(this).closest('li').hide('slow');
+	 	}
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
