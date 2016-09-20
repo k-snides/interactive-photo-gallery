@@ -78,22 +78,71 @@ section .wrapper {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	max-width: 300px;
+	max-width: 80%;
+	max-height: 60%;
 	/*margin-top: 10%;*/
 }
 
 #overlay figcaption {
 	position: absolute;
-	top: 80%;
+	top: 85%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	/*margin: 0 auto;
 	text-align: left;*/
 	text-align: left;
-	width: 300px;
+	width: 240px;
 	color: #ddd;
 	font-size: 0.8em;
 }
+
+button {
+	border: none;
+	margin: 0 2em;
+	background: none;
+	color: white;
+	outline: none;
+}
+
+button .fa-times {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 7em;
+}
+
+/*button .fa-arrow-circle-right,
+button .fa-arrow-circle-left {
+	position: absolute;
+	top: 50%;
+}*/
+
+button#btn-prev,
+button#btn-next {
+	position: absolute;
+	top: 20%;
+}
+
+/*button .fa-arrow-circle-left {
+	left: 10%;
+	font-size: 7em;
+}*/
+
+button#btn-prev {
+	left: 0%;
+	font-size: 3em;
+}
+
+/*button .fa-arrow-circle-right {
+	right: 10%;
+	font-size: 7em;
+}*/
+
+button#btn-next {
+	right: 0%;
+	font-size: 3em;
+}
+
 
 
 
@@ -126,14 +175,21 @@ section .wrapper {
 	}
 
 	/* ---------- Photo Section ---------- */
-	#photo-gallery img {
+	#photo-gallery img,
+	#photo-gallery iframe {
 		width: 200px;
 		height: 200px;
 	}
 
 	/* ---------- Overlay ---------- */
 	#overlay img {
-		max-width: 800px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 80%;
+		max-height: 60%;
+		/*margin-top: 10%;*/
 	}
 
 	#overlay figcaption {
@@ -141,6 +197,44 @@ section .wrapper {
 		font-size: 1.2em;
 		padding-top: 1em;
 		/*margin: 0 auto;*/
+	}
+
+	/*button .fa-times {
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		font-size: 7em;
+	}*/
+
+	/*button .fa-arrow-circle-right,
+	button .fa-arrow-circle-left {
+		position: absolute;
+		top: 50%;
+	}*/
+
+	button#btn-prev,
+	button#btn-next {
+		top: 50%;
+	}
+
+	/*button .fa-arrow-circle-left {
+		left: 10%;
+		font-size: 7em;
+	}*/
+
+	button#btn-prev {
+		left: 5%;
+		font-size: 4em;
+	}
+
+	/*button .fa-arrow-circle-right {
+		right: 10%;
+		font-size: 7em;
+	}*/
+
+	button#btn-next {
+		right: 5%;
+		font-size: 4em;
 	}
 }
 
@@ -190,7 +284,25 @@ section .wrapper {
 		margin-bottom: 60px;
 	}
 
-	
+	/* ---------- Overlay ---------- */
+	#overlay img {
+		max-width: 800px;
+	}
+
+	button#btn-prev,
+	button#btn-next {
+		top: 40%;
+	}
+
+	button#btn-prev {
+		/*left: -17%;*/
+		font-size: 7em;
+	}
+
+	button#btn-next {
+		/*right: -17%;*/
+		font-size: 7em;
+	}
 }
 
 
