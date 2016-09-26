@@ -21,10 +21,10 @@ body {
 
 /* ---------- Header ---------- */
 header {
-	background-color: green;
 	padding: 2em 0;
 	position: fixed;
 	width: 100%;
+	background-color: green;
 }
 
 /* --- Search Box --- */
@@ -43,8 +43,40 @@ section .wrapper {
 #photo-gallery {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+#photo-gallery.before-search {
 	justify-content: space-around;
 }
+
+.hide-images {
+	animation: hideImage 0.5s linear;
+}
+
+.show-images {
+	display: block;
+}
+
+@keyframes hideImage {
+	0% { 
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(720deg) scale(0);
+		opacity: 0;
+		/*display: none;*/
+	}
+}
+
+.after-search {
+	border: 1px solid red;
+	justify-content: flex-start;
+}
+
+/*.after-search-img {
+	margin-right: 45px;
+}*/
 
 #photo-gallery li {
 	list-style: none;
@@ -181,6 +213,12 @@ button#btn-next {
 		height: 200px;
 	}
 
+	.after-search {
+		/*justify-content: flex-start;
+		border: 1px solid red;
+		margin-right: 60px;*/
+	}
+
 	/* ---------- Overlay ---------- */
 	#overlay img {
 		position: absolute;
@@ -276,7 +314,7 @@ button#btn-next {
 	}
 	
 	/* ---------- Photo Section ---------- */
-	#photo-gallery {
+	#photo-gallery.before-search {
 		justify-content: space-between;
 	}
 

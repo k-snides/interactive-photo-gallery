@@ -15,7 +15,6 @@ var $index = 0;
 // Gets the length of photos in the photo gallery
 var $galleryLength = $('#photo-gallery li').length;
 
-
 /**
  * [updateImage: updates image overlay]
  * @param  {string} imageLocation [gets img href]
@@ -29,6 +28,7 @@ var updateImage = function(imageLocation, imageCaption) {
 	// Set alt text to $figCaption
 	$figCaption.text(imageCaption);
 };
+
 
 /**
  * [prevNextImages: cycles through overlay images]
@@ -45,13 +45,13 @@ var prevNextImages = function(next) {
 		$index--;
 	}
 
-	// If $index gets below 0
+	// If photos get clicked past first photo
 	if ($index < 0) {
 		// Set $index to last photo
 		$index = $galleryLength - 1;
 	}
 
-	// If $index goes above last photo
+	// If photos get clicked past last photo
 	if ($index > $galleryLength - 1) {
 		// Set $index to first photo
 		$index = 0;
@@ -135,31 +135,42 @@ $nextArrow.on('click', function() {
 
 
 /* ---------- Begin Search ---------- */
-// triggers event on type, copy-n-paste or clicking x
 $('#search').on('keyup click input', function() {
+	
+	// $('#search').on('click', function() {
+	// 	searchFunction();
+	// 	console.log('click');
+	// });
 
-	// gets the users search input & converts to lower case
-	var search = $(this).val().toLowerCase();
-	 
-	// cycles through each img in #photo-gallery
-  $('#photo-gallery img').each(function() {
+		// gets the users search input & converts to lower case
+		var search = $(this).val().toLowerCase();
+		 
+		// cycles through each img in #photo-gallery
+	  $('#photo-gallery img').each(function() {
 
-  	// gets the alt attribute & converts to lower case
-	 	var text = $(this).attr('alt').toLowerCase();
-	 
-	 	// if text doesn't match users search
-	 	if (text.indexOf(search) === -1) {
-	 		// find the <li> tag and hide images
-	 		$(this).closest('li').hide(); // TODO add class for animation
-	 	}
-	 	// if text does match users search
-	 	else {
-	 		// find the <li> tag and show images
-	 		$(this).closest('li').show(); // TODO add class for animation
-	 	}
-	});
+	  	// gets the alt attribute & converts to lower case
+		 	var text = $(this).attr('alt').toLowerCase();
+		 
+		 	// if text doesn't match users search
+		 	if (text.indexOf(search) === -1) {
+		 		// find the <li> tag and hide images
+		 		$(this).closest('li').slideUp(800);
+		 	}
+		 	// if text does match users search
+		 	else {
+		 		// find the <li> tag and show images
+		 		// $(this).closest('li').show();
+		 		$(this).closest('li').slideDown(800);
+
+
+		 		// if (search.length === 0) {
+		 		// 	$('#photo-gallery').removeClass('after-search').addClass('before-search');
+		 		// }
+		 	}
+		});
 });
 /* ---------- End Search ---------- */
+
 
 
 /* ---------- Begin Keyboard Navigation ---------- */
