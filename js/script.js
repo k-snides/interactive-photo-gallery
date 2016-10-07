@@ -1,13 +1,18 @@
+// Declares to JSHint that $ is a global variable,
+// and the false indicates that it should not be overridden.
+/*globals $:false */
+
 // Variables
-var $overlay    = $('<div id="overlay"></div>');
-var $image      = $("<img>");
-var $figCaption = $('<figcaption></figcaption>');
+var $overlay      = $('<div id="overlay"></div>');
+var $image        = $("<img>");
+var $figCaption   = $('<figcaption></figcaption>');
 
-var $prevArrow = $('<button id="btn-prev"> < </button>');
-var $nextArrow = $('<button id="btn-next"> > </button>');
-
-// Keeps track of index number for next / prev buttons
-var index = 0;
+// Creates buttons for the prev / next buttons
+var $prevArrow    = $('<button id="btn-prev"> < </button>');
+var $nextArrow    = $('<button id="btn-next"> > </button>');
+                  
+// Keeps track of index number for prev / next buttons
+var index         = 0;
 
 // Gets the length of photos in the photo gallery
 var galleryLength = $('#photo-gallery li').length;

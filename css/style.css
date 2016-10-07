@@ -43,7 +43,7 @@ section .wrapper {
 #photo-gallery {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: center;
 }
 
 #photo-gallery li {
@@ -117,19 +117,6 @@ button#btn-next {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ===================================================
 --- Small devices (tablets, 768px and up) ---
 =================================================== */
@@ -188,23 +175,16 @@ button#btn-next {
 	/* ---------- Wrappers ---------- */
 	.wrapper {
 		max-width: 1040px;
-		/*border: 1px solid red;*/
 	}
 	
 	/* ---------- Photo Section ---------- */
 	#photo-gallery {
 		justify-content: flex-start;
-		/*border: 1px solid red;*/
 	}
 
 	#photo-gallery li {
 		margin: 0 30px 60px 30px;
 		padding: 0;
-		/*border: 1px solid green;*/
-	}
-
-	#photo-gallery li:nth-child(4n + 4) {
-		/*margin-right: 0px;*/
 	}
 
 	/* ---------- Overlay ---------- */
@@ -227,24 +207,3 @@ button#btn-next {
 		font-size: 5em;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
